@@ -1,5 +1,4 @@
 {
-  "name": "nuxt-app",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,14 +9,9 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@windicss/plugin-animations": "^1.0.9",
-    "nuxt": "^3.9.1",
-    "nuxt-windicss": "^2.6.1",
-    "vue": "^3.4.10",
+    "@nuxt/devtools": "^1.0.3",
+    "nuxt": "^3.8.2",
+    "vue": "^3.3.8",
     "vue-router": "^4.2.5"
-  },
-  "dependencies": {
-    "@css-render/vue3-ssr": "^0.15.12",
-    "naive-ui": "^2.37.3"
   }
 }
