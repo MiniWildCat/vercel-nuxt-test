@@ -9,13 +9,27 @@ import 'node:crypto';
 import 'node:url';
 import express from 'express';
 
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
+
+// Es方式获取dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const cert = process.env.NITRO_SSL_CERT;
 const key = process.env.NITRO_SSL_KEY;
 const nitroApp = useNitroApp();
 
 // const server = cert && key ? new Server({ key, cert }, toNodeListener(nitroApp.h3App)) : new Server$1(toNodeListener(nitroApp.h3App));
-const server = express()
+let server = express()
+
+server.use(express.static(__dirname + '/../public'));
 server.use(toNodeListener(nitroApp.h3App))
+
+// 如果有证书，则添加证书
+if (cert && key) {
+  server = new Server({ key, cert }, server);
+}
 
 const port = destr(process.env.NITRO_PORT || process.env.PORT) || 3e3;
 const host = process.env.NITRO_HOST || process.env.HOST;
