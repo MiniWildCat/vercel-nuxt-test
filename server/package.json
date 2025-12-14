@@ -27,6 +27,7 @@
     "es-errors": "1.3.0",
     "es-object-atoms": "1.1.1",
     "estree-walker": "2.0.2",
+    "express": "^4.22.1",
     "follow-redirects": "1.5.10",
     "function-bind": "1.1.2",
     "get-intrinsic": "1.3.0",
