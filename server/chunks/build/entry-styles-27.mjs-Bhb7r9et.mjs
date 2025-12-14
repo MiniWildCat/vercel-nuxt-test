@@ -1,0 +1,4 @@
+const Index_vue_vue_type_style_index_1_lang = ".hover-search{background-color:#fff;box-shadow:0 0 10px 2px #5a5a5a99;height:60px;position:fixed;top:0;transform:translateY(-200px);transition:.35s;width:100%;z-index:9999}.show{top:0;transform:translateY(0);transform:translateZ(0)}.fixed-bar{height:0!important;opacity:0!important;overflow:hidden;transform:translateY(-10px);transition:.35s;z-index:999999}.show-fixed{height:354px!important;opacity:1!important;transform:translateY(0);transform:translateZ(0)}@media screen and (min-width:2561px)and (max-width:3840px){.fixed-bar{position:fixed;right:900px;top:500px}}@media screen and (max-width:2560px){.fixed-bar{position:fixed;right:300px;top:500px}}@media screen and (max-width:2025px){.fixed-bar{position:fixed;right:150px;top:300px}}";
+
+export { Index_vue_vue_type_style_index_1_lang as I };
+//# sourceMappingURL=entry-styles-27.mjs-Bhb7r9et.mjs.map
