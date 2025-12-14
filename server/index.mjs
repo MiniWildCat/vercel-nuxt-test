@@ -12,7 +12,11 @@ import express from 'express';
 const cert = process.env.NITRO_SSL_CERT;
 const key = process.env.NITRO_SSL_KEY;
 const nitroApp = useNitroApp();
-const server = cert && key ? new Server({ key, cert }, toNodeListener(nitroApp.h3App)) : new Server$1(toNodeListener(nitroApp.h3App));
+
+// const server = cert && key ? new Server({ key, cert }, toNodeListener(nitroApp.h3App)) : new Server$1(toNodeListener(nitroApp.h3App));
+const server = express()
+server.use(toNodeListener(nitroApp.h3App))
+
 const port = destr(process.env.NITRO_PORT || process.env.PORT) || 3e3;
 const host = process.env.NITRO_HOST || process.env.HOST;
 const path = process.env.NITRO_UNIX_SOCKET;
@@ -35,5 +39,5 @@ trapUnhandledNodeErrors();
 setupGracefulShutdown(listener, nitroApp);
 const nodeServer = {};
 
-export default listener;
+export default server;
 //# sourceMappingURL=index.mjs.map
